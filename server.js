@@ -4,7 +4,7 @@ var mongo = require('mongodb').MongoClient;
 
 app.get('/search/:searchQuery', function(request, response){
 
-  mongo.connect('mongodb://localhost:27017/database', function(err, db){
+  mongo.connect('mongodb://pythoncow:shrek420@ds141474.mlab.com:41474/pythoncow', function(err, db){
     if (err) throw err;
     var recentSearches = db.collection('recentSearches');
     recentSearches.find().toArray(function(err, docs){
